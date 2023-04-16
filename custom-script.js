@@ -10,6 +10,7 @@ generateBtn.addEventListener("click", () => {
   generateBtn.innerText = "Generating QR Code...";
   let upiPay = `upi://pay?pa=9848952217@ybl&am=${qrValue}&pn=jahangir%20md`;
   qrImg.src = `https://chart.googleapis.com/chart?cht=qr&choe=UTF-8&chs=250x250&chl=${encodeURIComponent(upiPay)}`;
+ console.log(qrImg.src);
   qrImg.addEventListener("load", () => {
     wrapper.classList.add("active");
     generateBtn.innerText = "Generate QR Code";
